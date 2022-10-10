@@ -1,3 +1,11 @@
+import fs from 'fs';
 import chalk from 'chalk';
 
-console.log('hello world')
+function chamaArquivo(caminhoDoArquivo){
+    const encoding = 'UTF-8';
+    fs.readFile(caminhoDoArquivo, encoding, (_, texto) => {
+        console.log(chalk.green(texto));
+    })
+}
+
+chamaArquivo('./arquivos/texto.md')
