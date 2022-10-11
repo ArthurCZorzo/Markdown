@@ -7,7 +7,7 @@ function trataErro(erro){
 
 function chamaArquivo(caminhoDoArquivo){
     const encoding = 'UTF-8';
-    fs.promises.readFile(caminhoDoArquivo, encoding).then((texto) => console.log(chalk.green(texto))).catch(trataErro   )
+    fs.promises.readFile(caminhoDoArquivo, encoding).then((texto) => console.log(chalk.green(texto))).catch(trataErro)
 }
 
 /*function chamaArquivo(caminhoDoArquivo){
