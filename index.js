@@ -7,12 +7,17 @@ function trataErro(erro){
 
 function chamaArquivo(caminhoDoArquivo){
     const encoding = 'UTF-8';
+    fs.promises.readFile(caminhoDoArquivo, encoding).then((texto) => console.log(chalk.green(texto))).catch(trataErro   )
+}
+
+/*function chamaArquivo(caminhoDoArquivo){
+    const encoding = 'UTF-8';
     fs.readFile(caminhoDoArquivo, encoding, (erro, texto) => {
         if(erro){
             trataErro(erro);
         }
         console.log(chalk.green(texto));
     })
-}
+}*/
 
 chamaArquivo('./arquivos/texto.md')
